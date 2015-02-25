@@ -6,17 +6,17 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Formulario Persona</title>
 </head>
 <body>
 	<s:form action="form">
-		<s:textfield name = "nombre"
+		<s:textfield name = "persona.nombre"
 					 label = "Nombre">
 		</s:textfield>			 
-		<s:textfield name = "edad"
+		<s:textfield name = "persona.edad"
 					 label = "Edad">
 		</s:textfield>
-		<s:submit/>
+		<s:submit value="Enviar"/>
 	</s:form>
 </body>
 </html>

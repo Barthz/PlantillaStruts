@@ -1,8 +1,10 @@
-package curso.struts.action;
+package curso.jee.action;
+
 
 import com.opensymphony.xwork2.ActionSupport;
 
-import curso.struts.model.Persona;
+import curso.jee.model.Persona;
+
 
 public class FormularioAction extends ActionSupport {
 
@@ -14,7 +16,6 @@ public class FormularioAction extends ActionSupport {
 	private Persona persona;
 
 	public String execute() throws Exception {
-		persona = new Persona();
 		return SUCCESS;
 	}
 	

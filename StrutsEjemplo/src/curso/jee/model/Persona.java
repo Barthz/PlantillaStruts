@@ -1,4 +1,4 @@
-package curso.struts.model;
+package curso.jee.model;
 
 public class Persona {
 	
