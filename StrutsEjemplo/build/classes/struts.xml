@@ -9,13 +9,24 @@
  
     <package name="basicstruts2" extends="struts-default">
  
+        <interceptors>
+            <!-- interceptor personalizado -->
+            <!--<interceptor name="miInterceptor" class="bla.foo.MiInterceptorClass"></interceptor>-->
+            <!-- Pila de interceptores personalizada -->
+            <interceptor-stack name="miPiladeFiltros">
+                <interceptor-ref name="timer"/>
+                <interceptor-ref name="defaultStack"/>
+            </interceptor-stack>
+        </interceptors>
+        
         <action name="index">
             <result>/index.jsp</result>
         </action>
         
-		<action name="form" class="curso.jee.action.FormularioAction" method="execute">
+		<action name="form" class="curso.jee.action.FormularioAction" method="execute">    
+		    <interceptor-ref name="miPiladeFiltros"/>
 		    <result name="success">/salidaform.jsp</result>
-        </action>        
+        </action>
         
     </package>
  
