@@ -14,7 +14,7 @@
         </action>
         
 		<action name="form" class="org.apache.struts.helloworld.action.FormularioAction" method="execute">
-			<result>/inicio.jsp</result>
+		    <result name="success">/salidaform.jsp</result>
         </action>        
         
     </package>
