@@ -9,7 +9,7 @@
 </head>
 <body>
 	<h2>Persona</h2>
-	<p><s:property value="persona.nombre"/></p>
+	<p><s:property value="persona.nombre"/> <s:property value="apellido"/></p>
 	<p><s:property value="persona.edad"/></p>
 </body>
 </html>

@@ -11,11 +11,13 @@
  
         <interceptors>
             <!-- interceptor personalizado -->
-            <!--<interceptor name="miInterceptor" class="bla.foo.MiInterceptorClass"></interceptor>-->
+            <interceptor name="miInterceptor" class="curso.jee.interceptores.MiInterceptor"></interceptor>
             <!-- Pila de interceptores personalizada -->
             <interceptor-stack name="miPiladeFiltros">
-                <interceptor-ref name="timer"/>
+                <interceptor-ref name="miInterceptor"></interceptor-ref>                
                 <interceptor-ref name="defaultStack"/>
+                <interceptor-ref name="logger"></interceptor-ref>
+                <interceptor-ref name="timer"/>
             </interceptor-stack>
         </interceptors>
         
@@ -23,7 +25,8 @@
             <result>/index.jsp</result>
         </action>
         
-		<action name="form" class="curso.jee.action.FormularioAction" method="execute">    
+		<action name="form" class="curso.jee.action.FormularioAction" method="execute">
+		    <param name="apellido">Plomez</param>    
 		    <interceptor-ref name="miPiladeFiltros"/>
 		    <result name="success">/salidaform.jsp</result>
         </action>

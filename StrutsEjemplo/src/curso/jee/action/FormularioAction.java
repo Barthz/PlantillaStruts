@@ -15,7 +15,10 @@ public class FormularioAction extends ActionSupport {
 
 	private Persona persona;
 
+	private String apellido;
+	
 	public String execute() throws Exception {
+		System.out.println("Ejecuto FormularioAction");
 		return SUCCESS;
 	}
 	
@@ -25,6 +28,14 @@ public class FormularioAction extends ActionSupport {
 
 	public void setPersona(Persona persona) {
 		this.persona = persona;
+	}
+
+	public String getApellido() {
+		return apellido;
+	}
+
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
 	}
 	
 }
