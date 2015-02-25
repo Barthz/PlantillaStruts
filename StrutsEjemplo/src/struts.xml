@@ -12,7 +12,11 @@
         <action name="index">
             <result>/index.jsp</result>
         </action>
- 
+        
+		<action name="form" class="org.apache.struts.helloworld.action.FormularioAction" method="execute">
+			<result>/inicio.jsp</result>
+        </action>        
+        
     </package>
  
 </struts>
