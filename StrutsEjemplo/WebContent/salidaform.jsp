@@ -8,8 +8,13 @@
 <title>Respuesta Form</title>
 </head>
 <body>
+	<!-- así comprueba si validate() añadió mensajes de error y los muestro -->
+	<s:if test="hasActionMessages()">
+		<s:actionmessage/>
+	</s:if>
 	<h2>Persona</h2>
 	<p><s:property value="persona.nombre"/> <s:property value="apellido"/></p>
 	<p><s:property value="persona.edad"/></p>
+	<img src="images/<s:property value="myFileFileName"/>"/>
 </body>
 </html>

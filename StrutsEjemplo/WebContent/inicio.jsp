@@ -9,14 +9,20 @@
 <title>Formulario Persona</title>
 </head>
 <body>
-	<s:form action="form">
+	<s:form action="form" method="post" enctype="multipart/form-data">
 		<s:textfield name = "persona.nombre"
 					 label = "Nombre">
 		</s:textfield>			 
 		<s:textfield name = "persona.edad"
 					 label = "Edad">
 		</s:textfield>
+		<s:file name="myFile" label="Archivo"/>
 		<s:submit value="Enviar"/>
 	</s:form>
+	
+	<!-- así compruebo si validate() añadió mensaje de error y los muestro -->
+	<s:if test="hasActionErrors()">
+		<s:actionerror/>
+	</s:if>
 </body>
 </html>

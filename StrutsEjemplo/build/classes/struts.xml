@@ -2,35 +2,45 @@
 <!DOCTYPE struts PUBLIC
     "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
     "http://struts.apache.org/dtds/struts-2.0.dtd">
- 
+
 <struts>
- 
-    <constant name="struts.devMode" value="true" />
- 
-    <package name="basicstruts2" extends="struts-default">
- 
-        <interceptors>
-            <!-- interceptor personalizado -->
-            <interceptor name="miInterceptor" class="curso.jee.interceptores.MiInterceptor"></interceptor>
-            <!-- Pila de interceptores personalizada -->
-            <interceptor-stack name="miPiladeFiltros">
-                <interceptor-ref name="miInterceptor"></interceptor-ref>                
-                <interceptor-ref name="defaultStack"/>
-                <interceptor-ref name="logger"></interceptor-ref>
-                <interceptor-ref name="timer"/>
-            </interceptor-stack>
-        </interceptors>
-        
-        <action name="index">
-            <result>/index.jsp</result>
-        </action>
-        
-		<action name="form" class="curso.jee.action.FormularioAction" method="execute">
-		    <param name="apellido">Plomez</param>    
-		    <interceptor-ref name="miPiladeFiltros"/>
-		    <result name="success">/salidaform.jsp</result>
-        </action>
-        
-    </package>
- 
+
+	<constant name="struts.devMode" value="true" />
+
+	<package name="basicstruts2" extends="struts-default">
+
+		<interceptors>
+			<!-- interceptor personalizado -->
+			<interceptor name="miInterceptor" class="curso.jee.interceptores.MiInterceptor"></interceptor>
+			<!-- Pila de interceptores personalizada -->
+			<interceptor-stack name="miPiladeFiltros">
+				<interceptor-ref name="miInterceptor"></interceptor-ref>
+				
+				<interceptor-ref name="defaultStack">
+				    <param name="fileUpload.allowedTypes">text/plain,image/*</param>
+				</interceptor-ref>
+								
+				<interceptor-ref name="logger"></interceptor-ref>
+				<interceptor-ref name="timer" />
+			</interceptor-stack>
+		</interceptors>
+
+		<action name="index">
+			<result>/index.jsp</result>
+		</action>
+
+		<action name="form" class="curso.jee.action.FormularioAction"
+			method="execute">
+			<param name="apellido">Plomez</param>
+			<param name="edadMaxima">80</param>
+			<param name="directorio">C:\\Users\\alumno\\git\\Prueba\\StrutsEjemplo\\WebContent\\images\\</param>
+			<interceptor-ref name="miPiladeFiltros" />
+			<result name="success">/salidaform.jsp</result>
+			<!-- en caso de que la validación en el action no sea correcta el interceptor 
+				workflow redirigirá aquí -->
+			<result name="input">/inicio.jsp</result>
+		</action>
+
+	</package>
+
 </struts>
