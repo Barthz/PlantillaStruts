@@ -58,6 +58,7 @@ public class FormularioAction extends ActionSupport {
 
 			in.close();
 			out.close();
+			System.out.println("FECHA: " + persona.getFecha());
 		} catch(Exception e) {
 			e.printStackTrace();
 		}

@@ -15,6 +15,7 @@
 	<h2>Persona</h2>
 	<p><s:property value="persona.nombre"/> <s:property value="apellido"/></p>
 	<p><s:property value="persona.edad"/></p>
+	<p><s:property value="persona.fecha"/></p> 
 	<img src="<s:property value="myFileFileName"/>"/>
 </body>
 </html>
