@@ -5,16 +5,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Respuesta Form</title>
+<meta http-equiv="refresh" content="5;url=<s:url includeParams="all" />"/>
+<title>Cargando</title>
 </head>
 <body>
-	<!-- así comprueba si validate() añadió mensajes de error y los muestro -->
-	<s:if test="hasActionMessages()">
-		<s:actionmessage/>
-	</s:if>
-	<h2>Persona</h2>
-	<p><s:property value="persona.nombre"/> <s:property value="apellido"/></p>
-	<p><s:property value="persona.edad"/></p>
-	<img src="<s:property value="myFileFileName"/>"/>
+	<div align="center">
+		<h2>ESPERANDO...</h2>
+		<img alt="Esperando" src="nyan.gif" />
+	</div>
 </body>
 </html>

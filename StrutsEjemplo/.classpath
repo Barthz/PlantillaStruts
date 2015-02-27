@@ -29,5 +29,6 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/alumno/Desktop/struts2/struts-2.3.20-lib/struts-2.3.20/lib/xwork-core-2.3.20.jar"/>
 	<classpathentry kind="lib" path="C:/Users/alumno/git/Prueba/StrutsEjemplo/WebContent/WEB-INF/lib/log4j-1.2.14.jar"/>
+	<classpathentry kind="lib" path="C:/Users/alumno/git/Prueba/StrutsEjemplo/WebContent/WEB-INF/lib/struts2-dojo-plugin-2.3.20.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
