@@ -6,6 +6,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
 import com.opensymphony.xwork2.ActionSupport;
+import com.opensymphony.xwork2.conversion.annotations.TypeConversion;
 
 import curso.jee.model.Persona;
 
@@ -17,6 +18,9 @@ public class FormularioAction extends ActionSupport {
 	 */
 	private static final long serialVersionUID = 1L;
 
+	/**
+	 * Necesario para setear los atributos del form
+	 */
 	private Persona persona;
 
 	/** Para el uso del fileupload interceptor, son necesarios estos 3 atributos
@@ -84,6 +88,8 @@ public class FormularioAction extends ActionSupport {
 		return persona;
 	}
 
+	//Aqui iría la anotación para la conversión de tipos
+	@TypeConversion(converter="curso.jee.model.conversores.ConversorPersona")
 	public void setPersona(Persona persona) {
 		this.persona = persona;
 	}

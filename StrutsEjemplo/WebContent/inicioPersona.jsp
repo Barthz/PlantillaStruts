@@ -14,16 +14,10 @@
 </head>
 <body>
 	<s:form action="form" method="post" enctype="multipart/form-data">
-		<s:textfield name="persona" label="Persona Nombre"/>
-		<s:textfield name="persona" label="Persona Edad"/>
-		<s:textfield name="persona.nombre" label="Nombre">
-		</s:textfield>
-		<s:textfield name="persona.edad" label="Edad">
-		</s:textfield>
-		<s:file name="myFile" label="Archivo" />
-		<!-- calendario -->
-		<sx:datetimepicker name="persona.fecha" label="Fecha de llegada"
-			displayFormat="dd-MMM-yyyy" value="todayDate" />
+	<!-- Cada ocurrencia de persona que encuentre se guardará en una posición del
+		array de valores en la clase Conversor, en orden -->
+		<s:textfield name="persona" label="Nombre"/>
+		<s:textfield name="persona" label="Edad"/>
 		<s:submit value="Enviar" />
 	</s:form>
 

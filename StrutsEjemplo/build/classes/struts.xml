@@ -36,7 +36,8 @@
 			<param name="edadMaxima">80</param>
 			<param name="directorio">C:\\Users\\alumno\\git\\Prueba\\StrutsEjemplo\\WebContent\\</param>
 			<interceptor-ref name="miPiladeFiltros" />
-			<result name="success">/salidaform.jsp</result>
+			<!-- <result name="success">/salidaform.jsp</result> -->
+			<result name="success">/salidaformPersona.jsp</result>
 			<!-- en caso de que la validación en el action no sea correcta el interceptor 
 				workflow redirigirá aquí -->
 			<result name="input">/inicio.jsp</result>
