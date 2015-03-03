@@ -15,7 +15,7 @@ public class ConversorPersona extends StrutsTypeConverter {
 	public Object convertFromString(Map arg0, String[] values, Class arg2) {
 		// TODO Auto-generated method stub
 		Persona persona = null;
-		if("curso.jee.model.Persona".equals(arg2.getName()))		
+		if(Persona.class==arg2)			
 			persona = new Persona(Integer.parseInt(values[1]), values[0].toString());
 		return persona;
 	}
